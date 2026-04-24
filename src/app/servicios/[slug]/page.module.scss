@@ -1,0 +1,107 @@
+@use '@/styles/colors' as *;
+
+.page {
+  padding-top: 70px; // navbar height offset
+}
+
+/* ─── Service hero banner ─────────────────────────────────── */
+.hero {
+  width: 100%;
+  min-height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.heroOverlay {
+  width: 100%;
+  min-height: 300px;
+  background: linear-gradient(
+    42deg,
+    rgba(7, 25, 34, 0.85) 0%,
+    rgba(15, 45, 61, 0.75) 50%,
+    rgba(7, 25, 34, 0.85) 100%
+  );
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 40px;
+  padding-top: 80px;
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.heroTag {
+  color: $text-light;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+/* ─── Content ─────────────────────────────────────────────── */
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 60px 0 40px;
+  align-items: flex-start;
+}
+
+.imgCol {
+  flex: 0 0 30%;
+  max-width: 30%;
+}
+
+.textCol {
+  flex: 1;
+}
+
+/* ─── Bottom nav ──────────────────────────────────────────── */
+.bottomNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0 60px;
+  border-top: 1px solid $bg-deeper;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.backLink {
+  color: $text-light;
+  font-size: 1.4rem;
+  font-weight: 500;
+  transition: 0.3s;
+
+  &:hover { color: $accent; }
+}
+
+.contactLink {
+  display: inline-block;
+  background-color: $accent;
+  border: 2px solid $accent;
+  padding: 12px 30px;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: $bg-dark;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: transparent;
+    color: $text-light;
+  }
+}
+
+/* ─── Responsive ──────────────────────────────────────────── */
+@media screen and (max-width: 990px) {
+  .heroTitle { font-size: 2.5rem; }
+
+  .imgCol {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .bottomNav { justify-content: center; }
+}

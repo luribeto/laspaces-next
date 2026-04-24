@@ -1,0 +1,55 @@
+@use '@/styles/colors' as *;
+
+.testimonio {
+  padding: 0 4rem;
+  margin: 2rem 0 0 0;
+  position: relative;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.imgCol {
+  flex: 0 0 25%;
+  display: flex;
+  justify-content: center;
+}
+
+.avatar {
+  width: 180px;
+  height: 180px;
+  border-radius: 90px;
+  margin-top: 2rem;
+  object-fit: cover;
+}
+
+.txtCol {
+  flex: 1;
+  padding: 2rem 3rem;
+  background-color: $gray-color;
+  border-radius: 10px;
+
+  h5 { color: $main-color; }
+
+  p {
+    padding: 1.5rem 0;
+    font-size: 2rem;
+    font-style: italic;
+    text-align: justify;
+  }
+}
+
+.quote { font-size: 3rem; }
+
+@media screen and (max-width: 990px) {
+  .imgCol {
+    flex: 0 0 100%;
+    padding-bottom: 2rem;
+  }
+
+  .txtCol p { font-size: 2.5rem; }
+}

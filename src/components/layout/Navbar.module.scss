@@ -1,0 +1,112 @@
+@use '@/styles/colors' as *;
+
+/* ─── Desktop navbar ─────────────────────────────────────── */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $light-color;
+  width: 100%;
+  padding: 9px 0;
+  transition: 0.3s ease;
+  z-index: 100;
+}
+
+.extraLarge {
+  padding: 29px 0;
+}
+
+.logoDesktop { display: block; }
+.logoMobile  { display: none; }
+
+.mobileMenuBtn {
+  display: none;
+  background: none;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.desktopMenu {
+  li {
+    cursor: pointer;
+    padding: 2rem 2.7rem;
+    margin: 0 1rem;
+
+    &:last-child { margin-right: 0; padding-right: 0; }
+
+    a {
+      color: $black-color;
+      &:hover { color: $main-color; }
+    }
+  }
+}
+
+/* ─── Mobile drawer ──────────────────────────────────────── */
+.mobileNavbar {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  background-color: #2e2d2c;
+  z-index: 1000;
+  width: 50%;
+  transition: 0.4s ease;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.mobileOpen { right: 0; }
+
+.closeBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 20px;
+  display: block;
+}
+
+.mobileLogo {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.mobileMenu {
+  padding-top: 20%;
+
+  ul li {
+    cursor: pointer;
+    font-size: 2.5rem;
+    padding: 5% 0;
+
+    a {
+      color: $main-color;
+      &:hover { color: $main-color; }
+    }
+  }
+}
+
+/* ─── Backdrop ───────────────────────────────────────────── */
+.backdrop {
+  width: 100%;
+  height: 100vh;
+  background-color: $black-color;
+  opacity: 0.8;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 500;
+}
+
+/* ─── Responsive ─────────────────────────────────────────── */
+@media screen and (max-width: 1170px) {
+  .mobileMenuBtn  { display: block; }
+  .desktopMenu    { display: none !important; }
+  .logoDesktop    { display: none; }
+  .logoMobile     { display: block; }
+  .mobileNavbar   { width: 70%; }
+}
+
+@media screen and (max-width: 520px) {
+  .mobileNavbar { width: 100%; }
+}

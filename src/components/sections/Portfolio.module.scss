@@ -1,0 +1,72 @@
+@use '@/styles/colors' as *;
+
+.portfolio {
+  padding: 20px 0 40px 0;
+}
+
+.nav {
+  min-height: 50px;
+  margin-bottom: 20px;
+}
+
+/* Detail view */
+.servicioMain {
+  padding: 30px 0;
+}
+
+.servicioGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.serviceImg {
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.servicioText {
+  flex: 1;
+}
+
+.serviceLink {
+  margin-top: 30px;
+}
+
+.verMas {
+  color: $main-color;
+  font-size: 1.4rem;
+  font-weight: 800;
+  border-bottom: 1px solid $main-color;
+  padding-bottom: 2px;
+
+  &:hover { opacity: 0.8; }
+}
+
+/* Masonry — these classes must be global for react-masonry-css */
+:global(.my-masonry-grid) {
+  display: flex;
+  margin-left: -30px;
+  width: auto;
+}
+
+:global(.mint__gallery) {
+  padding-left: 30px;
+  background-clip: padding-box;
+}
+
+:global(.mint__gallery > div) {
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 991px) {
+  .serviceImg {
+    flex: 0 0 100%;
+    max-width: 100%;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+}

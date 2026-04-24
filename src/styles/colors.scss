@@ -1,0 +1,16 @@
+// Color palette — Las Paces
+// Note: variable names reflect the visual role, not literal color names
+$bg-dark:    #0F2D3D;   // Main background (dark navy)
+$text-light: #D9D9D9;   // Primary text (light gray)
+$bg-deeper:  #071922;   // Deeper background / card bg
+$accent:     #00afef;   // Brand accent (cyan blue)
+$green:      #48ca7d;   // Success / green accent
+$gray:       #2E2D2C;   // Muted gray
+
+// Legacy aliases (match old variable names used across components)
+$white-color: $bg-dark;
+$black-color: $text-light;
+$light-color: $bg-deeper;
+$main-color:  $accent;
+$green-color: $green;
+$gray-color:  $gray;

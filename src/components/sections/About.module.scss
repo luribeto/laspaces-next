@@ -1,0 +1,30 @@
+.about {
+  padding: 60px 0;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.bioCol {
+  flex: 0 0 66.6%;
+  max-width: 66.6%;
+}
+
+.teamCol {
+  flex: 1;
+}
+
+@media screen and (max-width: 990px) {
+  .about {
+    text-align: center;
+  }
+
+  .bioCol,
+  .teamCol {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}

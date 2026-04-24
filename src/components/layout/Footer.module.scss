@@ -1,0 +1,86 @@
+@use '@/styles/colors' as *;
+
+.footer {
+  background-color: $light-color;
+  width: 100%;
+  min-height: 180px;
+  padding: 20px 0;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.logoCol {
+  flex: 0 0 83.33%;
+  max-width: 83.33%;
+}
+
+.btnCol {
+  flex: 0 0 16.66%;
+  max-width: 16.66%;
+}
+
+.footerBoxLp {
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+
+  p {
+    color: $main-color;
+    font-size: 1.1rem;
+    margin-left: 30px;
+  }
+}
+
+.backToTop {
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  float: right;
+  cursor: pointer;
+  border-left: 1px solid #0f2d3d;
+
+  p {
+    color: $main-color;
+    font-size: 1.1rem;
+    margin-left: 30px;
+  }
+
+  img {
+    margin-left: 10px;
+  }
+
+  &:hover p { color: $main-color; }
+}
+
+@media screen and (max-width: 1170px) {
+  .footerBoxLp {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    img { padding-bottom: 30px; }
+    p { margin-left: 0; }
+  }
+
+  .backToTop {
+    float: none;
+    flex-direction: row;
+    justify-content: center;
+
+    img { padding-bottom: 0; }
+  }
+
+  .logoCol,
+  .btnCol {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .backToTop { border: none; }
+}

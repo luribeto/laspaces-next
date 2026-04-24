@@ -1,0 +1,42 @@
+@use '@/styles/colors' as *;
+
+.portfolioBox {
+  position: relative;
+  max-width: 370px;
+  height: 400px;
+  margin: 15px auto;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center center;
+}
+
+.hoverInfo {
+  background: linear-gradient(
+    42deg,
+    rgba(15, 45, 61, 0.8) 0%,
+    rgba(0, 175, 239, 0.8) 41%,
+    rgba(72, 202, 125, 0.8) 100%
+  );
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.3s ease;
+  color: $white-color;
+  padding: 0.5rem;
+
+  p { text-transform: uppercase; }
+  p:last-child { color: $light-color; }
+}
+
+.hoverInfo:hover {
+  opacity: 1;
+}
+
+@media screen and (max-width: 1024px) {
+  .hoverInfo {
+    opacity: 1;
+  }
+}

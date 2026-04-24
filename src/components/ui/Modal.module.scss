@@ -1,0 +1,66 @@
+@use '@/styles/colors' as *;
+
+.modalOverlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  text-align: center;
+  margin: 0 5%;
+}
+
+.backdrop {
+  background-color: $black-color;
+  opacity: 0.8;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 300;
+  cursor: pointer;
+}
+
+.modalBox {
+  position: relative;
+  z-index: 500;
+  padding: 30px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $white-color;
+
+  p { font-size: 1.5rem; color: $black-color; font-weight: 800; margin: 10px 0; }
+}
+
+.title {
+  font-size: 3rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 10px !important;
+}
+
+.success .title { color: $main-color; }
+.error   .title { color: #f45c21; }
+
+.modalBtn {
+  background-color: $main-color;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #1e1e1e;
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-top: 15px;
+}
+
+@media only screen and (max-width: 360px) {
+  .modalBox { padding: 20px; }
+}

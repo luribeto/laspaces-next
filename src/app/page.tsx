@@ -1,66 +1,59 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import type { Metadata } from 'next';
+import Hero from '@/components/sections/Hero';
+import Portfolio from '@/components/sections/Portfolio';
+import Partners from '@/components/sections/Partners';
+import About from '@/components/sections/About';
+import Blog from '@/components/sections/Blog';
+import Contact from '@/components/sections/Contact';
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: 'https://laspaces.co',
+  },
+};
+
+const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Las Paces',
+  url: 'https://laspaces.co',
+  description:
+    'Organización colombiana especializada en Justicia Restaurativa, atención psicosocial, mediación entre víctimas y responsables, y formación para operadores de justicia.',
+  contactPoint: {
+    '@type': 'ContactPoint',
+    telephone: '+57-320-3433353',
+    email: 'laspaces.sas@gmail.com',
+    contactType: 'customer support',
+    areaServed: 'CO',
+    availableLanguage: 'Spanish',
+  },
+  sameAs: [
+    'https://www.facebook.com/profile.php?id=100069085670675',
+    'https://twitter.com/Las_Paces',
+    'https://www.youtube.com/channel/UCGFt4-hlrrLIu3Ptjd4JfVQ',
+  ],
+  founder: {
+    '@type': 'Person',
+    name: 'Lina Rondón Daza',
+    jobTitle: 'Psicóloga especialista en Justicia Restaurativa',
+  },
+};
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+      />
+      <main>
+        <Hero />
+        <Portfolio />
+        <Partners />
+        <About />
+        <Blog />
+        <Contact />
       </main>
-    </div>
+    </>
   );
 }
