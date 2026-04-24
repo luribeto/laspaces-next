@@ -37,7 +37,7 @@ export async function generateMetadata(
   if (!service) return {};
 
   return {
-    title: service.metaTitle,
+    title: { absolute: service.metaTitle },
     description: service.metaDescription,
     alternates: {
       canonical: `https://laspaces.co/servicios/${service.slug}`,
