@@ -36,8 +36,8 @@ export default function Navbar() {
       <nav className={`${styles.navbar} ${!isScrolled ? styles.extraLarge : ''}`}>
         <div className="wrapper flex-s-between">
           <a href="#hero" aria-label="Ir al inicio">
-            <Image src={LogoImg} alt="Las Paces logo" height={40} className={styles.logoDesktop} />
-            <Image src={LogoMobile} alt="Las Paces logo" height={40} className={styles.logoMobile} />
+            <Image src={LogoImg} alt="Las Paces logo" width={200} height={50} className={styles.logoDesktop} />
+            <Image src={LogoMobile} alt="Las Paces logo" width={50} height={50} className={styles.logoMobile} />
           </a>
 
           {/* Hamburger — visible only on mobile */}
