@@ -7,17 +7,26 @@
   left: 0;
   background-color: $light-color;
   width: 100%;
-  padding: 20px 0;
+  padding: 14px 0;
   transition: 0.3s ease;
   z-index: 100;
 }
 
 .extraLarge {
-  padding: 40px 0;
+  padding: 24px 0;
 }
 
-.logoDesktop { display: block; }
-.logoMobile  { display: none; }
+.logoDesktop {
+  display: block;
+  height: 90px;
+  width: auto;
+}
+
+.logoMobile {
+  display: none;
+  height: 50px;
+  width: auto;
+}
 
 .mobileMenuBtn {
   display: none;

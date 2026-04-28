@@ -40,9 +40,9 @@ export default function Partners() {
         >
           {PARTNERS.map(({ id, img, alt }) => (
             <SwiperSlide key={id}>
-              <div className={styles.partnerBox}>
-                <Image src={img} alt={alt} height={60} />
-              </div>
+              <a href="#portfolio" className={styles.partnerBox}>
+                <Image src={img} alt={alt} height={110} style={{ width: 'auto', height: '110px' }} />
+              </a>
             </SwiperSlide>
           ))}
         </Swiper>

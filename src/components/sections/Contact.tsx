@@ -26,6 +26,8 @@ interface FormState {
 
 const EMPTY_FORM: FormState = { name: '', email: '', phone: '', message: '' };
 
+emailjs.init({ publicKey: API_KEY });
+
 export default function Contact() {
   const [form, setForm]           = useState<FormState>(EMPTY_FORM);
   const [sending, setSending]     = useState(false);
@@ -47,7 +49,7 @@ export default function Contact() {
     };
 
     try {
-      const response = await emailjs.send(SERVICE_ID, TEMPLATE_ID, params, API_KEY);
+      const response = await emailjs.send(SERVICE_ID, TEMPLATE_ID, params);
       if (response.status === 200) {
         setModal('success');
       } else {
@@ -113,7 +115,7 @@ export default function Contact() {
 
           {/* Background image */}
           <div className={`${styles.imgCol} flex-center`}>
-            <Image src={ContactBackground} alt="Las Paces — contacto" />
+            <Image src={ContactBackground} alt="Las Paces — contacto" style={{ width: '100%', height: 'auto', maxWidth: '400px' }} />
           </div>
         </div>
 
