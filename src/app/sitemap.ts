@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { services } from '@/lib/services';
 
-const BASE_URL = 'https://laspaces.co';
+const BASE_URL = 'https://laspaces-next-hazel.vercel.app';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const servicePages = services.map((service) => ({
