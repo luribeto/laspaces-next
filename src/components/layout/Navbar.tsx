@@ -9,10 +9,10 @@ import CloseIcon from '@/assets/navbar/mobile-close.svg';
 import styles from './Navbar.module.scss';
 
 const NAV_LINKS = [
-  { href: '#portfolio', label: 'SERVICIOS' },
-  { href: '#about',     label: 'QUIENES SOMOS' },
-  { href: '#blog',      label: 'EXPERIENCIAS' },
-  { href: '#contact',   label: 'CONTACTO' },
+  { href: '/#portfolio', label: 'SERVICIOS' },
+  { href: '/#about',     label: 'QUIENES SOMOS' },
+  { href: '/#blog',      label: 'EXPERIENCIAS' },
+  { href: '/#contact',   label: 'CONTACTO' },
 ];
 
 export default function Navbar() {
@@ -35,7 +35,7 @@ export default function Navbar() {
       {/* Desktop / main navbar */}
       <nav className={`${styles.navbar} ${!isScrolled ? styles.extraLarge : ''}`}>
         <div className="wrapper flex-s-between">
-          <a href="#hero" aria-label="Ir al inicio">
+          <a href="/#hero" aria-label="Ir al inicio">
             <Image src={LogoImg} alt="Las Paces logo" width={360} height={90} className={styles.logoDesktop} />
             <Image src={LogoMobile} alt="Las Paces logo" width={50} height={50} className={styles.logoMobile} />
           </a>
@@ -66,7 +66,7 @@ export default function Navbar() {
           <Image src={CloseIcon} alt="" width={30} height={30} aria-hidden="true" />
         </button>
         <div className={`${styles.mobileLogo} flex-center`}>
-          <a href="#hero" onClick={closeMobile}>
+          <a href="/#hero" onClick={closeMobile}>
             <Image src={LogoMobile} alt="Las Paces logo" height={50} />
           </a>
         </div>
