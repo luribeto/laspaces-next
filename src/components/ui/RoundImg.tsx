@@ -21,13 +21,17 @@ export default function RoundImg({ testimonio }: RoundImgProps) {
     <div className={styles.testimonio}>
       <div className={styles.grid}>
         <div className={styles.imgCol}>
-          <Image
-            src={image}
-            alt={title}
-            width={180}
-            height={180}
-            className={styles.avatar}
-          />
+          <div className={styles.avatarRow}>
+            <span className={styles.arrow}>&#8249;</span>
+            <Image
+              src={image}
+              alt={title}
+              width={180}
+              height={180}
+              className={styles.avatar}
+            />
+            <span className={styles.arrow}>&#8250;</span>
+          </div>
         </div>
         <div className={styles.txtCol}>
           <h3 className="font30 weight800 padding5">{title}</h3>
